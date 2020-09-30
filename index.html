@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+ <link rel="stylesheet" href="weather.css">
+
+
+  <title>Weather_site</title>
+</head>
+
+<header class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Weather Caster 2000
+      </h1>
+      <h2 class="subtitle">
+        Built with Bulma
+      </h2>
+    </div>
+  </div>
+</header>
+
+<body>
+<!-- enter the city name here -->
+  <div class="container">
+    <div class="columns">
+      <div class="column is-two-fifths">
+       <div class="box">
+        <label class="label">Input Cities Name Below</label>
+        
+        <form class="field has-addons">
+          <div class="control">
+            <input class="input is-primary" type="text" placeholder="Text input">
+          </div>
+          <p class="contorl">
+            <a class="button is-primary" type= "submit" id="search" >Search</a>
+          </p>
+          <p class="contorl">
+            <a class="button is-info" id="clear" >Clear</a>
+          </p>
+        </form>
+
+        <ul class="search-history"></ul>
+        
+       </div>
+     </div>
+      <div class="column is-three-fifths">
+        <section class="hero is-info">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title has-text-centered" id="today">
+                Search a city to find the forecast
+              </h1>
+              <h2 class="subtitle has-text-centered" class="today">
+                
+              </h2>
+            </div>
+          </div>
+        </section>
+        <table class="table">
+          <tbody class="table">
+            <tr class="table-main">
+              <th>Temperature</th>
+              <td id="temp-data">that goes here</td>
+            </tr>
+            <tr class="table-main">
+              <th>humidity</th>
+              <td id="humidity-data">that goes here</td>
+            </tr>
+            <tr class="table-main">
+              <th>Wind Speed</th>
+              <td id="wind-data">that goes here</td>
+            </tr>
+            <tr class="table-main">
+              <th>Uv-Index</th>
+              <td id="uv-data">that goes here</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-full">
+        <section class="hero is-info">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title has-text-centered">
+                Five Day Forecast
+              </h1>
+              <h2 class="has-text-centered">Uv index table : Green = super light || Yellow = light || orange = medium || red = heavy || purple = Super Heavy</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="column is-1"></div>
+      <div class="column is-2">
+        <div class="box">
+          <p id="1date"></p>
+          <img id="1img"/>
+          <p id="1temp"></p>
+          <p id="1humid"></p>
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="box" class="uv-data">
+          <p id="2date"></p>
+          <img id="2img"/>
+          <p class="box-text" id="2temp" class="uv-data"></p>
+          <p id="2humid"></p>
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="box"> 
+          <p id="3date"></p>
+          <img id="3img" />
+             <p class="card-text" id="3temp"></p>
+              <p class="card-text" id="3humid"></p>
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="box"> 
+          <p id="4date"></p>
+          <img id="4img" />
+             <p class="card-text" id="4temp"></p>
+              <p class="card-text" id="4humid"></p>
+        </div>
+      </div>
+      <div class="column is-2">
+        <div class="box">
+          <p id="5date"></p>
+          <img id="5img" />
+             <p class="card-text" id="5temp"></p>
+              <p class="card-text" id="5humid"></p>
+        </div>
+      </div>
+      <div class="column is-1"></div>
+    </div>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script> 
+<script
+ src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"
+ integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg=="
+ crossorigin="anonymous"
+></script>
+ <script src="script.js"></script>
+</html>
